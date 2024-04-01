@@ -7,6 +7,11 @@ import ProductPage from "./pages/ProductPage";
 
 import "./App.css";
 import Slide from "./components/Slide";
+import { Switch } from "react-router-dom";
+import { Route } from "react-router-dom/cjs/react-router-dom.min";
+import { HomePage } from "./pages/HomePage";
+import { CounterPage } from "./pages/CounterPage";
+import { ProductDetailPage } from "./pages/ProductDetailPage";
 
 function App() {
   const [productsData, setProductsData] = useState([]);
@@ -48,7 +53,6 @@ function App() {
 
   return (
     <div className="app">
-      <button onClick={ilkUrunIsminiDegistir}>isim değiştir</button>
       <Header
         productsCount={productsData.length}
         productEkle={productEkle}
@@ -56,7 +60,20 @@ function App() {
       />
       <Slide />
       <div className="page-body">
-        <ProductPage productsData={productsData} />
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+          <Route path="/products" exact>
+            <ProductPage productsData={productsData} />
+          </Route>
+          <Route path="/product-detail/:productId" exact>
+            <ProductDetailPage productsData={productsData} />
+          </Route>
+          <Route path="/counter" exact>
+            <CounterPage />
+          </Route>
+        </Switch>
       </div>
       <Footer productsCount={productsData.length} />
     </div>

@@ -27,9 +27,6 @@ const ProductPage = ({ productsData }) => {
             <ProductCard product={product} key={product.id} />
           ))}
       </div>
-      <div>
-        <Counter />
-      </div>
     </>
   );
 };

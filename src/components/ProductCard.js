@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styles from "./ProductCard.module.css";
 import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product, dataCek }) => {
   console.log("PRODUCT CARD PROPS: ", { product, dataCek });
@@ -28,6 +29,12 @@ const ProductCard = ({ product, dataCek }) => {
       >
         Satın Al
       </Button>
+      <Link
+        className="btn btn-primary ms-1"
+        to={"/product-detail/" + product.id}
+      >
+        İncele
+      </Link>
     </div>
   );
 };

@@ -1,10 +1,11 @@
-import { Link } from "./Link";
+import { Link } from "react-router-dom";
 
 const Nav = ({ productsCount }) => {
   return (
     <nav>
-      <Link href="#">Home</Link>
-      <a href="#">Products [{productsCount}]</a>
+      <Link to="/">Home</Link>
+      <Link to="/products">Products [{productsCount}]</Link>
+      <Link to="/counter">Counter</Link>
     </nav>
   );
 };
