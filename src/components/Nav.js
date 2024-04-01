@@ -1,8 +1,10 @@
-const Nav = ({ productsData }) => {
+import { Link } from "./Link";
+
+const Nav = ({ productsCount }) => {
   return (
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Products [{productsData.length}]</a>
+      <Link href="#">Home</Link>
+      <a href="#">Products [{productsCount}]</a>
     </nav>
   );
 };

@@ -1,16 +1,33 @@
+import { useEffect } from "react";
+import styles from "./ProductCard.module.css";
+import { Button } from "reactstrap";
+
 const ProductCard = ({ product, dataCek }) => {
   console.log("PRODUCT CARD PROPS: ", { product, dataCek });
-  const { imgURL, baslik, aciklama, fiyat } = product;
+  const { img, name, description, price } = product;
+
+  // componentDidMount
+  useEffect(() => {
+    console.log("ComponentDidMount: ProductCard");
+  }, []);
+
+  // componentDidUpdate
+  useEffect(() => {
+    console.log("ComponentDidUpdate: ProductCard");
+  });
 
   return (
-    <div className="card">
-      <img src={imgURL} />
-      <h3>{baslik}</h3>
-      <p>{aciklama}</p>
-      <p>{fiyat}</p>
-      <button onClick={() => dataCek(baslik + " ürünü satın alındı!")}>
+    <div className={styles.card} title={product.id}>
+      <img src={img} />
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <p>{price}</p>
+      <Button
+        color="primary"
+        onClick={() => dataCek(name + " ürünü satın alındı!")}
+      >
         Satın Al
-      </button>
+      </Button>
     </div>
   );
 };

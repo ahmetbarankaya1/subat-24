@@ -26,15 +26,3 @@ nav > a:hover {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
-.card {
-  border: 1px solid #ccc;
-  border-radius: 1rem;
-  padding: 1rem;
-  flex-basis: 400px;
-  flex-grow: 1;
-}
-
-.card > img {
-  width: 100%;
-}
