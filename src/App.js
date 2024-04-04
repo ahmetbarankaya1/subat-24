@@ -12,6 +12,7 @@ import { Route } from "react-router-dom/cjs/react-router-dom.min";
 import { HomePage } from "./pages/HomePage";
 import { CounterPage } from "./pages/CounterPage";
 import { ProductDetailPage } from "./pages/ProductDetailPage";
+import { ContactPage } from "./pages/ContactPage";
 
 function App() {
   const [productsData, setProductsData] = useState([]);
@@ -72,6 +73,9 @@ function App() {
           </Route>
           <Route path="/counter" exact>
             <CounterPage />
+          </Route>
+          <Route path="/contact" exact>
+            <ContactPage />
           </Route>
         </Switch>
       </div>

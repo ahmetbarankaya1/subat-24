@@ -26,3 +26,11 @@ nav > a:hover {
   flex-wrap: wrap;
   gap: 1rem;
 }
+
+.error {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 10px;
+}
