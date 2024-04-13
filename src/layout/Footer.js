@@ -1,10 +1,10 @@
 import Nav from "../components/Nav";
 
-const Footer = ({ productsCount }) => {
+const Footer = ({ productsData }) => {
   return (
     <footer>
       <h2>Web Yazılım öğrenmek çok kolay!</h2>
-      <Nav productsCount={productsCount} />
+      <Nav productsData={productsData} />
     </footer>
   );
 };

@@ -1,23 +1,11 @@
-import { useEffect } from "react";
 import Nav from "../components/Nav";
 
-const Header = ({ productsCount, productEkle, fetchProducts }) => {
-  // component Did Mount!
-  useEffect(() => {
-    console.log("Header componenti oluşturuldu ve ekrana eklendi");
-  }, []);
-
-  // componentDidUpdate
-  useEffect(() => {
-    console.log("ComponentDidUpdate: Header");
-  });
-
+const Header = ({ productsData, productEkle }) => {
   return (
-    <header className="app-header">
+    <header className="App-header">
       <h1>Reactet Şubat</h1>
-      <Nav productsCount={productsCount} />
-      <button onClick={productEkle}>+ Product Ekle</button>
-      <button onClick={fetchProducts}> Ürünleri yükle</button>
+      <Nav productsData={productsData} />
+      <button onClick={productEkle}>+ Poduct Ekle</button>
     </header>
   );
 };

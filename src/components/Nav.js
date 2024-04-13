@@ -1,12 +1,8 @@
-import { Link } from "react-router-dom";
-
-const Nav = ({ productsCount }) => {
+const Nav = ({ productsData }) => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="/products">Products [{productsCount}]</Link>
-      <Link to="/counter">Counter</Link>
-      <Link to="/contact">Contact</Link>
+      <a href="#">Home</a>
+      <a href="#">Products [{productsData.length}]</a>
     </nav>
   );
 };
